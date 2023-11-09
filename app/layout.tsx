@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    
     <html lang="en">
       <body >
         <Navbar/>
@@ -27,6 +27,6 @@ export default function RootLayout({
         <Footer/>
         </body>
     </html>
-    </ClerkProvider>
+   
   )
 }
