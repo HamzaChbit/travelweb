@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-       <ClerkProvider>
-         <StateContext> 
+    <ClerkProvider>
+       <StateContext>
     <html lang="en">
       <body >
   
@@ -31,9 +31,8 @@ export default function RootLayout({
         <Footer/>
        
         </body>
-    </html> 
+    </html>
     </StateContext>
     </ClerkProvider>
-   
   )
 }
