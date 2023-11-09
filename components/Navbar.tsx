@@ -53,7 +53,7 @@ const Navbar = () => {
                 variant='btn_dark_green'
                
             />
-       <UserButton afterSignOutUrl="/"/>
+     
         </div>
         <Image src="menu.svg" alt="menu" width={32} height={32} className="inline-block cursor-pointer lg:hidden"  onClick={()=>setShowMenu(true)}/>
        
@@ -76,14 +76,14 @@ const Navbar = () => {
                 </Link>
               
             ))}
-               <Link  href="/sign-in" className="flex flex-row justify-center items-center " >
+               <div   className="flex flex-row justify-center items-center " >
                  <Button  type="button" 
                      title='' icon='/user.svg'
                      variant='btn_dark_green'
                     
                  />
-            <UserButton afterSignOutUrl="/"/>
-             </Link>
+           
+             </div>
 
         </ul>
 
