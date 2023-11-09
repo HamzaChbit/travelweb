@@ -1,18 +1,27 @@
-"use client"
+'use client'
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
 import Button from "./Button"
-import { useState } from "react"
+
 import { MdOutlineClose } from 'react-icons/md'
+import { useStateContext } from "@/hooks/use-state"
+import { UserButton } from "@clerk/nextjs"
+
+
 
 
 
 const Navbar = () => {
 
+    
 
-
-    const [showMenu,setShowMenu] =useState(false)
+    const  {
+        showMenu ,
+        setShowMenu,
+       
+       
+      } = useStateContext()
 
 
 
@@ -46,7 +55,7 @@ const Navbar = () => {
                      variant='btn_dark_green'
                     
                  />
-            
+             <UserButton afterSignOutUrl='/' />
              </Link>
      
    

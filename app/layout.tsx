@@ -1,9 +1,11 @@
+
 import type { Metadata } from 'next'
 
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ClerkProvider } from '@clerk/nextjs'
+import { StateContext } from '@/hooks/use-state'
 
 
 export const metadata: Metadata = {
@@ -17,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
        <ClerkProvider>
+         <StateContext> 
     <html lang="en">
       <body >
   
@@ -29,6 +32,7 @@ export default function RootLayout({
        
         </body>
     </html> 
+    </StateContext>
     </ClerkProvider>
    
   )
