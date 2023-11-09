@@ -16,17 +16,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+       <ClerkProvider>
     <html lang="en">
       <body >
+  
         <Navbar/>
         <main className='relative overflow-hidden'>
                {children}
         </main>
    
         <Footer/>
+       
         </body>
-    </html>
+    </html> 
     </ClerkProvider>
+   
   )
 }

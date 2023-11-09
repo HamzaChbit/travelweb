@@ -5,7 +5,8 @@ import Link from "next/link"
 import Button from "./Button"
 import { useState } from "react"
 import { MdOutlineClose } from 'react-icons/md'
-import { UserButton } from "@clerk/nextjs";
+
+
 
 const Navbar = () => {
 
@@ -13,7 +14,7 @@ const Navbar = () => {
 
     const [showMenu,setShowMenu] =useState(false)
 
-  
+
 
   return (
     <nav className=" flexBetween max-container padding-container relative z-30 py-5" >
@@ -31,15 +32,24 @@ const Navbar = () => {
                 </Link>
             ))}
 
+
+
+
+
+
         </ul>
-        <div className="lg:flexCenter hidden " >
-            <Button  type="button" 
-                title='' icon='/user.svg'
-                variant='btn_dark_green'
-               
-            />
-       <UserButton afterSignOutUrl="/"/>
-        </div>
+        
+
+              <Link  href="sign-in" className="flex flex-row justify-center items-center " >
+                 <Button  type="button" 
+                     title='' icon='/user.svg'
+                     variant='btn_dark_green'
+                    
+                 />
+            
+             </Link>
+     
+   
         <Image src="menu.svg" alt="menu" width={32} height={32} className="inline-block cursor-pointer lg:hidden"  onClick={()=>setShowMenu(true)}/>
        
 
@@ -61,14 +71,14 @@ const Navbar = () => {
                 </Link>
               
             ))}
-               <div className="flex flex-row justify-center items-center " >
+               <Link  href="/sign-in" className="flex flex-row justify-center items-center " >
                  <Button  type="button" 
                      title='' icon='/user.svg'
                      variant='btn_dark_green'
                     
                  />
-            <UserButton afterSignOutUrl="/"/>
-             </div>
+            
+             </Link>
 
         </ul>
 
