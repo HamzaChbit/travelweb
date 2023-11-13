@@ -12,18 +12,19 @@ export const metadata: Metadata = {
   title: 'Travel',
   description: 'Travel UI/UX App for Camping',
 }
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+  user: any; // Replace 'any' with the actual type of your user data
+}
+export default function RootLayout({ children, user }: RootLayoutProps) {
   return (
     <ClerkProvider>
        <StateContext>
     <html lang="en">
       <body >
   
-        <Navbar/>
+      <Navbar user={user} />
         <main className='relative overflow-hidden'>
                {children}
         </main>
