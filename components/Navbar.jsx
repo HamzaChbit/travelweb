@@ -57,7 +57,7 @@ const Navbar = () => {
 
               <Link href="/sign-in" className="flex flex-row justify-center items-center">
                 <Button type="button" title='' icon='/user.svg' variant='btn_dark_green' />
-                <UserButton afterSignOutUrl="/" />
+               
               </Link>
 
             </ul>
