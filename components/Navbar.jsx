@@ -34,6 +34,9 @@ const Navbar = () => {
             <Link href='sign-in'>
               <Button type="button" title='Login' icon='/user.svg' variant='btn_dark_green' />
             </Link>
+            <Link href='sign-up'>
+              <Button type="button" title='Register' icon='/user.svg' variant='btn_white_text' />
+            </Link>
           </div>
          
         </>
