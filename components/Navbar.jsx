@@ -3,15 +3,15 @@ import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
-import { MdOutlineClose } from 'react-icons/md';
+
 import { UserButton, auth,  } from "@clerk/nextjs";
 
 
 
-// Server-side logic to fetch user information
 
 
-const Navbar = ({user}) => {
+
+const Navbar = () => {
 
      const { userId } = auth();
     

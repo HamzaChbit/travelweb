@@ -15,16 +15,16 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  user: any; // Replace 'any' with the actual type of your user data
+ 
 }
-export default function RootLayout({ children, user }: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-   
+   <ClerkProvider>
        <StateContext>
     <html lang="en">
       <body >
   
-      <Navbar user={user} />
+      <Navbar />
         <main className='relative overflow-hidden'>
                {children}
         </main>
@@ -34,6 +34,6 @@ export default function RootLayout({ children, user }: RootLayoutProps) {
         </body>
     </html>
     </StateContext>
-  
+    </ClerkProvider>
   )
 }
