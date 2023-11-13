@@ -19,7 +19,7 @@ interface RootLayoutProps {
 }
 export default function RootLayout({ children, user }: RootLayoutProps) {
   return (
-    <ClerkProvider>
+   
        <StateContext>
     <html lang="en">
       <body >
@@ -34,6 +34,6 @@ export default function RootLayout({ children, user }: RootLayoutProps) {
         </body>
     </html>
     </StateContext>
-    </ClerkProvider>
+  
   )
 }
