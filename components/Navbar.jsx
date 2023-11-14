@@ -30,7 +30,7 @@ const Navbar = () => {
       </ul>
       {!userId && (
         <>
-          <div className="lg:flexCenter ">
+          <div className="lg:flexCenter flex">
             <Link href='sign-in'>
               <Button type="button" title='Login' icon='/user.svg' variant='btn_dark_green' />
             </Link>
